@@ -1,0 +1,63 @@
+1. Creacion package.json
+npm init -y
+
+2. Instalacion de librerias necesarias
+npm install typescript ts-node @types/node @types/express @types/cors --save-dev
+npm install express cors
+
+3. Generacion archivo tsconfig.json
+./node_modules/.bin/tsc --init
+
+{
+  "compilerOptions": {
+    /* Language and Environment */
+    "target": "es2016",                               /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
+    "experimentalDecorators": true,                   /* Enable experimental support for legacy experimental decorators. */
+    "emitDecoratorMetadata": true,                    /* Emit design-type metadata for decorated declarations in source files. */
+
+    /* Modules */
+    "module": "commonjs",                             /* Specify what module code is generated. */
+    "resolveJsonModule": true,                        /* Enable importing .json files. */
+
+    /* Emit */
+    "sourceMap": true,                                /* Create source map files for emitted JavaScript files. */
+    "outDir": "./build",                              /* Specify an output folder for all emitted files. */
+    "removeComments": true,                           /* Disable emitting comments. */
+
+    /* Interop Constraints */
+    "esModuleInterop": true,                          /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables 'allowSyntheticDefaultImports' for type compatibility. */
+    "forceConsistentCasingInFileNames": true,         /* Ensure that casing is correct in imports. */
+
+    /* Type Checking */
+    "strict": true,                                   /* Enable all strict type-checking options. */
+
+    /* Completeness */
+    "skipLibCheck": true                              /* Skip type checking all .d.ts files. */
+  }
+}
+
+4. Modificar el package.json
+{
+    ...
+    "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "dev": "node ./build/server.js",
+    "start": "tsc && npm run dev"
+  },
+}
+
+5. Crear archivo index.ts en ./src/index.ts
+
+6. Fuera de la carpeta src crear server.ts
+
+7. En la carpeta src / routes , cree el archivo home.routes.ts que exporte Routerel objeto.
+
+8. Instalacion nodemon en ts
+npm install --save-dev nodemon ts-node
+
+9. Correr server
+npx nodemon ./server.ts
+
+10. Traslipado typescript
+tsc -w
