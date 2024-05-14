@@ -1,14 +1,26 @@
-1. Creacion package.json
-npm init -y
+# Pasos generación del proyecto:
 
-2. Instalacion de librerias necesarias
-npm install typescript ts-node @types/node @types/express @types/cors --save-dev
-npm install express cors
+* Creación package *.json: `npm init -y`
 
-3. Generacion archivo tsconfig.json
-./node_modules/.bin/tsc --init
+* Instalar package node_modules: `npm install`
 
-{
+* Instalacion de librerias necesarias: 
+
+> npm install 
+    typescript
+    ts-node 
+    @types/node 
+    @types/express 
+    @types/cors --save-dev
+npm install 
+    express 
+    cors
+
+* Generacion archivo tsconfig.json: npm `./node_modules/.bin/tsc --init`
+
+** Configuración archivo tsconfig.json:
+
+> {
   "compilerOptions": {
     /* Language and Environment */
     "target": "es2016",                               /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
@@ -36,8 +48,9 @@ npm install express cors
   }
 }
 
-4. Modificar el package.json
-{
+* Modificar el package.json
+
+> {
     ...
     "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -47,17 +60,14 @@ npm install express cors
   },
 }
 
-5. Crear archivo index.ts en ./src/index.ts
+* Crear archivo index.ts en ./src/index.ts
 
-6. Fuera de la carpeta src crear server.ts
+* Fuera de la carpeta src crear server.ts
 
-7. En la carpeta src / routes , cree el archivo home.routes.ts que exporte Routerel objeto.
+* En la carpeta src / routes , cree el archivo home.routes.ts que exporte Routerel objeto.
 
-8. Instalacion nodemon en ts
-npm install --save-dev nodemon ts-node
+* Instalacion nodemon en ts: `npm install --save-dev nodemon ts-node`
 
-9. Correr server
-npx nodemon ./server.ts
+* Correr server: `npx nodemon ./server.ts`
 
-10. Traslipado typescript
-tsc -w
+* Traslipado typescript:` tsc -w`
